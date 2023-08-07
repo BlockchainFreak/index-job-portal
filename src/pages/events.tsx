@@ -16,7 +16,7 @@ export default function EventsPage({ events }: InferGetStaticPropsType<typeof ge
                 <Grid>
                     {
                         events.map((event, index) => (
-                            <Grid.Col key={index} span={4} xs={12} md={6} lg={4} onClick={() => router.push(`/events/${event.slug}`)}>
+                            <Grid.Col key={index} xs={12} md={6} lg={4} onClick={() => router.push(`/events/${event.slug}`)}>
                                 <EventCard {...event.fields} />
                             </Grid.Col>
                         ))

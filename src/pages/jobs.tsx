@@ -16,7 +16,7 @@ export default function JobsPage({ jobs }: InferGetStaticPropsType<typeof getSta
                 <Grid>
                     {
                         jobs.map((job, index) => (
-                            <Grid.Col key={index} span={4} xs={12} md={6} lg={4} onClick={() => router.push(`/jobs/${job.slug}`)}>
+                            <Grid.Col key={index} xs={12} md={6} lg={4} onClick={() => router.push(`/jobs/${job.slug}`)}>
                                 <JobListings {...job.fields} />
                             </Grid.Col>
                         ))
