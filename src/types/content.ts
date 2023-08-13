@@ -19,3 +19,14 @@ export interface IEventSkeleton {
     description: EntryFieldTypes.RichText,
   }
 }
+
+export interface IMemberSkeleton {
+  contentTypeId: "member"
+  fields: {
+    name: EntryFieldTypes.Text,
+    position: EntryFieldTypes.Text,
+    batch: EntryFieldTypes.Text,
+    image?: EntryFieldTypes.AssetLink,
+    level: EntryFieldTypes.Text,
+  }
+}

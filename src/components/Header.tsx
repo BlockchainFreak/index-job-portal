@@ -9,6 +9,7 @@ export default function Header() {
                 { label: "Home", link: "/", Icon: IconHome },
                 { label: "Jobs", link: "/jobs", Icon: IconBriefcase },
                 { label: "Events", link: "/events", Icon: IconCalendarEvent },
+                { label: "Our Team", link: "/members", Icon: IconUsersGroup }
             ]}/>
         </header>
     )
