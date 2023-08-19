@@ -69,5 +69,6 @@ export async function getStaticProps() {
         props: {
             ec, directorate
         },
+        revalidate: 1
     }
 }
