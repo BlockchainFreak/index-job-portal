@@ -4,6 +4,10 @@ import { MantineProvider, type MantineThemeOverride } from '@mantine/core'
 import Header from "@/components/Header"
 import Image from 'next/image'
 import { IconBrandInstagram, IconBrandFacebookFilled, IconBrandLinkedin } from '@tabler/icons-react'
+import { Lato } from 'next/font/google'
+ 
+// If loading a variable font, you don't need to specify the font weight
+const lato = Lato({ subsets: ['latin'], weight: ['400', '700']})
 
 const customTheme: MantineThemeOverride = {
   colorScheme: "dark",
@@ -11,7 +15,7 @@ const customTheme: MantineThemeOverride = {
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div>
+    <div className={lato.className}>
       <MantineProvider theme={customTheme} withGlobalStyles withNormalizeCSS>
         <Header />
         <div className="fixed w-screen h-screen inset-0 bg-black opacity-10 -z-50">
