@@ -14,13 +14,13 @@ export default function Header() {
                 height={40}
                 priority
             />
-            <div className="flex justify-center flex-grow">
+            <div className="flex justify-end sm:justify-center flex-grow">
                 <Tabs links={[
                     { label: "Home", link: "/", Icon: IconHome },
                     { label: "Jobs", link: "/jobs", Icon: IconBriefcase },
                     { label: "Events", link: "/events", Icon: IconCalendarEvent },
                     { label: "Our Team", link: "/members", Icon: IconUsersGroup },
-                    { label: "Design Baithaks", link: "/baithaks", Icon: IconSparkles },
+                    { label: "Takhleeq", link: "/baithaks", Icon: IconSparkles },
                     { label: "LDF", link: "/ldf", Icon: IconConfetti },
                     { label: "UX Pakistan", link: "/ux-pakistan", Icon: IconUxCircle },
                 ]} />
