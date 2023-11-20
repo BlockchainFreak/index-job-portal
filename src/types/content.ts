@@ -28,5 +28,6 @@ export interface IMemberSkeleton {
     batch: EntryFieldTypes.Text,
     image?: EntryFieldTypes.AssetLink,
     level: EntryFieldTypes.Text,
+    order: EntryFieldTypes.Number,
   }
 }

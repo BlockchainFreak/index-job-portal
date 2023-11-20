@@ -1,21 +1,109 @@
-import Image from 'next/image'
+import Image from "next/image"
+// import { SwatchCard } from "@/components"
+import Typewriter from 'typewriter-effect';
+import { Roboto } from "next/font/google"
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ['500', '700'],
+  variable: "--roboto"
+})
+
+const agendas = [
+  {
+    title: "Our Mission",
+    description: "To teach, encourage and celebrate design innovation, design thinking and user based problem solving by hosting tutrials, workshops , seminars and networking opportunities. To connect designers at LUMS and around the country to brew culture of sharing design knowledge"
+  },
+  {
+    title: "Our Vision",
+    description: "INDEX aims to become the primary outlet to students both undergraduate and graduate at LUMS and the entirety of Pakistan who wish to refine and showcase their skills of implementing design choices and providing design solutions to real world problems.",
+  },
+  {
+    title: "Core Values",
+    description: "- Quality\n- Change\n- Team Work\n-	Diversity\n- Integrity\n- Innovation"
+  }
+]
+
 
 export default function Home() {
-  return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24`}
-    >
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
-          src="/logo-white.svg"
-          alt="Next.js Logo"
-          width={400}
-          height={200}
-          priority
-        />
-      </div>
 
-    </main>
+  const focus = ["Game Design",
+    "Animation",
+    "Graphic Design",
+    "UI/UX",
+  ]
+
+  return (
+    <div className="container flex flex-col gap-12 px-4 md:px-32 my-8">
+      <div className="flex justify-center">
+        <div style={{ width: "60vw", height: "30vw" }} className="relative">
+          <Image
+            alt="hero index"
+            src="/hero.png"
+            fill={true}
+          />
+        </div>
+      </div>
+      <div className="flex gap-2 justify-center text-3xl font-impact">
+        INDEX is all about
+        <span className="text-teal-500">
+          <Typewriter
+            options={{
+              strings: ['Innovation', 'Technology', 'Design', 'Creativity'],
+              autoStart: true,
+              loop: true,
+            }}
+          />
+        </span>
+      </div>
+      <div className="flex flex-col justify-center bg-black p-6 rounded-md bg-opacity-20">
+        <h2 className="text-3xl text-teal-600 text-center">Who We Are</h2>
+        <p className="text-justify font-bold text-2xl font-roboto">
+          INDEX: The Design and Innovation Society at LUMS is here to pave the way for savoir-faire user experience through design and innovation. The agenda is to make the community more prone to thinking from a design perspective and helping them realise the proper approach to good design.
+        </p>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {
+          agendas.map(({ title, description }, index) => (
+            <div key={index} className="col-span-1 md:col-span-1 lg:col-span-1">
+              {/* SwatchCard component replacement */}
+              {/* <SwatchCard
+                title={title}
+                description={description}
+              /> */}
+            </div>
+          ))
+        }
+      </div>
+      <div className="flex justify-center">
+        <div className="text-xl md:text-2xl lg:text-4xl">
+          <span className=" text-center">{`"EVERYTHING IS `}</span>
+          <span className=" text-teal-700">DESIGNED</span>
+        </div>
+      </div>
+      <div className="flex justify-center">
+        <div className="text-xl md:text-2xl lg:text-4xl">
+          <span className="">BUT NOT EVERYTHING IS</span>
+          <span className=" text-teal-700"> DESIGNED </span>
+          <span className="">{`WELL"`}</span>
+        </div>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 radiator-box">
+        {focus.map((focusItem, i) => (
+          <div key={i} className="col-span-1 md:col-span-1 lg:col-span-1 flex flex-col items-center">
+            <div className="grid place-item-center radiator">
+              <Image
+                alt={`Image ${i}`}
+                src={`/Group-${i + 1}.svg`}
+                height={220}
+                width={220}
+              />
+            </div>
+            <p className="text-lg text-teal-600 text-center">{focusItem}</p>
+          </div>
+        ))}
+      </div>
+    </div>
   )
 }
+

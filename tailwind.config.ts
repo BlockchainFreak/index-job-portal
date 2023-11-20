@@ -13,6 +13,14 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        'anton': ['Anton', 'sans-serif'],
+        'impact': ['Impact', 'Charcoal', 'sans-serif'],
+        'playfair': ['Playfair Display', 'serif'],
+        'bebas': ['Bebas Neue', 'cursive'],
+        'montserrat': ['Montserrat', 'sans-serif'],
+        'roboto': "var(--roboto)"
+      }
     },
   },
   plugins: [],

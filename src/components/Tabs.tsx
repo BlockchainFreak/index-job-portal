@@ -47,7 +47,7 @@ export default function Header({ links }: TabProps) {
                     {!isMobile && <span className="ml-2 font-mono">{label}</span>}
                 </div>
             ))}
-            <span className="-z-10 h-full rounded-md bottom-0 absolute bg-emerald-900 transition-all duration-300 ease-in-out delay-0" style={{ left: activeNav.offsetLeft, minWidth: activeNav.width }} />
+            <span className="-z-10 h-full rounded-md bottom-0 absolute bg-emerald-600 transition-all duration-300 ease-in-out delay-0" style={{ left: activeNav.offsetLeft, minWidth: activeNav.width }} />
         </nav>
     )
 }

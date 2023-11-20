@@ -1,3 +1,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.radiator {
+    margin: 10px;
+    width: 220px;
+    height: 220px;
+    cursor: pointer;
+    position: relative;
+    background: #49AA85;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.radiator::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    border-radius: inherit;
+    animation: pulse 2s infinite;
+    /* Run the pulse animation continuously */
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+}
+
+.radiator-box>div:nth-child(1) .radiator::after {
+    animation-delay: 0s;
+}
+
+.radiator-box>div:nth-child(2) .radiator::after {
+    animation-delay: 0.25s;
+}
+
+.radiator-box>div:nth-child(3) .radiator::after {
+    animation-delay: 0.5s;
+}
+
+.radiator-box>div:nth-child(4) .radiator::after {
+    animation-delay: 0.75s;
+}
