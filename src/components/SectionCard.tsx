@@ -24,7 +24,7 @@ export default function SectionCard({ title, description, image }: SectionCardPr
             />
         </div>
         <div className={"col-span-1" + lato.className}>
-            <div className="text-3xl text-emerald-500 font-bold">{title}</div>
+            <div className="text-3xl text-primary font-bold">{title}</div>
             <div className="text-xl text-justify font-semibold">
                 {
                     description.split("\n").map((line, index) => (

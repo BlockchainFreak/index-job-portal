@@ -9,7 +9,6 @@ export default function JobPostPage({ fields, publishedDate }: InferGetStaticPro
         <main>
             <Container className="bg-zinc-800 rounded-xl my-12 px-8 py-12">
                 <h1 className="text-4xl font-bold">{fields.title}</h1>
-                {/* <h5 className="text-2xl font-bold">{`fields.location`}</h5> */}
                 <Badge color="green" variant="light" className="mt-2">Event Date: {new Date(fields.time).toDateString()}</Badge>
                 <p className="text-gray-400 text-sm mt-2">Published on {new Date(publishedDate).toLocaleDateString()}</p>
                 <Divider/>

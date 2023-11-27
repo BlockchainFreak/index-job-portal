@@ -14,7 +14,7 @@ export interface IEventSkeleton {
   contentTypeId: "event"
   fields: {
     title: EntryFieldTypes.Text,
-    location: EntryFieldTypes.Text,
+    cover: EntryFieldTypes.AssetLink,
     time: EntryFieldTypes.Text,
     description: EntryFieldTypes.RichText,
   }

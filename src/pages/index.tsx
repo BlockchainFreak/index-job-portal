@@ -64,7 +64,7 @@ export default function Home() {
         </span>
       </div>
       <div className="flex flex-col justify-center bg-black p-6 rounded-md bg-opacity-20">
-        <h2 className="text-3xl text-teal-600 text-center">Who We Are</h2>
+        <h2 className="text-3xl text-primary text-center">Who We Are</h2>
         <p className="text-justify font-bold text-2xl font-roboto">
           INDEX: The Design and Innovation Society at LUMS is here to pave the way for savoir-faire user experience through design and innovation. The agenda is to make the community more prone to thinking from a design perspective and helping them realise the proper approach to good design.
         </p>
@@ -72,13 +72,13 @@ export default function Home() {
       <div className="flex justify-center">
         <div className="text-xl md:text-2xl lg:text-4xl">
           <span className=" text-center">{`"EVERYTHING IS `}</span>
-          <span className=" text-teal-700">DESIGNED</span>
+          <span className=" text-primary">DESIGNED</span>
         </div>
       </div>
       <div className="flex justify-center">
         <div className="text-xl md:text-2xl lg:text-4xl">
           <span className="">BUT NOT EVERYTHING IS</span>
-          <span className=" text-teal-700"> DESIGNED </span>
+          <span className=" text-primary"> DESIGNED </span>
           <span className="">{`WELL"`}</span>
         </div>
       </div>
@@ -93,7 +93,7 @@ export default function Home() {
                 width={220}
               />
             </div>
-            <p className="text-lg text-teal-600 text-center">{focusItem}</p>
+            <p className="text-lg text-primary text-center">{focusItem}</p>
           </div>
         ))}
       </div>

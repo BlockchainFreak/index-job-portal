@@ -4,10 +4,11 @@ import { MantineProvider, type MantineThemeOverride } from '@mantine/core'
 import Header from "@/components/Header"
 import Image from 'next/image'
 import { IconBrandInstagram, IconBrandFacebookFilled, IconBrandLinkedin } from '@tabler/icons-react'
-import { Lato } from 'next/font/google'
- 
+import { Lato, Roboto } from 'next/font/google'
+
 // If loading a variable font, you don't need to specify the font weight
-const lato = Lato({ subsets: ['latin'], weight: ['400', '700']})
+const lato = Lato({ subsets: ['latin'], weight: ['400', '700'], variable: "--lato" })
+const roboto = Lato({ subsets: ['latin'], weight: ['400', '700'], variable: "--roboto" })
 
 const customTheme: MantineThemeOverride = {
   colorScheme: "dark",
@@ -19,18 +20,20 @@ export default function App({ Component, pageProps }: AppProps) {
       <MantineProvider theme={customTheme} withGlobalStyles withNormalizeCSS>
         <Header />
         <div className="fixed w-screen h-screen inset-0 bg-black opacity-10 -z-50">
-          <Image
+          {/* <Image
             className="relative"
             src="/background.png"
             alt='background'
             layout='fill'
             objectFit='cover'
             objectPosition='center'
-          />
+          /> */}
         </div>
         <div className="absolute w-full h-full overflow-y-auto">
-          <Component {...pageProps} />
-          <footer className="bg-green-500 bg-opacity-20 w-screen h-96 p-6 flex flex-col justify-center gap-8">
+          <main>
+            <Component {...pageProps} />
+          </main>
+          <footer className="bg-secondary bg-opacity-20 w-screen h-96 p-6 flex flex-col justify-center gap-8">
             <div className='flex justify-center'>
               <Image
                 src="/logo-white.svg"
@@ -49,7 +52,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 <div className="aspect-square rounded-lg bg-opacity-80"><IconBrandLinkedin /></div>
               </div>
             </div>
-            <hr className="border border-white border-solid px-8 w-5/6"/>
+            <hr className="border border-white border-solid px-8 w-5/6" />
             <div>Copyright INDEX IT 2024</div>
           </footer>
         </div>

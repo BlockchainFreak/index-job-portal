@@ -7,23 +7,20 @@ import { useRouter } from 'next/navigation';
 
 export default function EventsPage({ events }: InferGetStaticPropsType<typeof getStaticProps>) {
 
-    const router = useRouter();
+
 
     return (
-        <main>
-            <Container className='rounded-xl bg-zinc-900 my-8 px-8 py-12'>
-                <Title order={1} mb={24}>Events</Title>
-                <Grid>
-                    {
-                        events.map((event, index) => (
-                            <Grid.Col key={index} xs={12} md={6} lg={4} onClick={() => router.push(`/events/${event.slug}`)}>
-                                <EventCard {...event.fields} />
-                            </Grid.Col>
-                        ))
-                    }
-                </Grid>
-            </Container>
-        </main>
+        <div className='rounded-xl bg-opacity-50 bg-secondary my-16 mx-auto w-5/6 sm:w-2/3 px-8 py-12'>
+            <div className="text-6xl text-white font-bold mb-16 flex justify-center">Our Events</div>
+            {/* <hr className="border-solid border-white border-t border-b-0 mb-16" /> */}
+            <div className="flex flex-col gap-12">
+                {
+                    events.map((event, index) => (
+                        <EventCard key={event.slug} {...event.fields} slug={event.slug} />
+                    ))
+                }
+            </div>
+        </div>
     )
 }
 
@@ -36,7 +33,10 @@ export async function getStaticProps() {
     const entries = await client.withoutUnresolvableLinks.getEntries<IEventSkeleton>({ content_type: 'event' });
 
     const events = entries.items.map(entry => ({
-        fields: entry.fields,
+        fields: {
+            ...entry.fields,
+            coverURL: entry.fields.cover?.fields.file?.url || "images.ctfassets.net/example.png"
+        },
         slug: entry.sys.id,
         publishedDate: entry.sys.createdAt
     }));

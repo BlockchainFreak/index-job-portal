@@ -1,5 +1,5 @@
 import Tabs from "@/components/Tabs"
-import { IconHome, IconUsersGroup, IconCalendarEvent, IconBriefcase, IconSparkles, IconConfetti, IconUxCircle } from "@tabler/icons-react"
+import { IconHome, IconUsersGroup, IconCalendarEvent, IconBriefcase, IconSparkles, IconConfetti, IconUxCircle, IconFriends } from "@tabler/icons-react"
 import Image from "next/image"
 
 export default function Header() {
@@ -19,10 +19,11 @@ export default function Header() {
                     { label: "Home", link: "/", Icon: IconHome },
                     { label: "Jobs", link: "/jobs", Icon: IconBriefcase },
                     { label: "Events", link: "/events", Icon: IconCalendarEvent },
+                    { label: "Our Partners", link: "/partners", Icon: IconFriends },
                     { label: "Our Team", link: "/members", Icon: IconUsersGroup },
-                    { label: "Takhleeq", link: "/baithaks", Icon: IconSparkles },
-                    { label: "LDF", link: "/ldf", Icon: IconConfetti },
-                    { label: "UX Pakistan", link: "/ux-pakistan", Icon: IconUxCircle },
+                    // { label: "Takhleeq", link: "/baithaks", Icon: IconSparkles },
+                    // { label: "LDF", link: "/ldf", Icon: IconConfetti },
+                    // { label: "UX Pakistan", link: "/ux-pakistan", Icon: IconUxCircle },
                 ]} />
             </div>
         </header>

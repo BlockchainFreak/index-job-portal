@@ -19,7 +19,12 @@ const config: Config = {
         'playfair': ['Playfair Display', 'serif'],
         'bebas': ['Bebas Neue', 'cursive'],
         'montserrat': ['Montserrat', 'sans-serif'],
-        'roboto': "var(--roboto)"
+        'roboto': "var(--roboto)",
+        'lato': "var(--lato)"
+      },
+      colors: {
+        'primary': '#49AA85',
+        'secondary': '#226A4E'
       }
     },
   },
