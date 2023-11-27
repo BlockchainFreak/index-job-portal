@@ -31,7 +31,7 @@ export default function EventCard({ title, time, description, coverURL, slug }: 
                 <div className="relative w-80 sm:w-96 aspect-square">
                     <Image
                         alt=""
-                        src={"https://" + coverURL}
+                        src={"https:" + coverURL}
                         fill={true}
                     />
                 </div>
