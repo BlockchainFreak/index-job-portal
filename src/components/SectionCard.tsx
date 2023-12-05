@@ -1,10 +1,4 @@
 import Image from "next/image";
-import { Lato } from "next/font/google"
-
-const lato = Lato({
-    weight: ["700"],
-    subsets: ["latin"]
-})
 
 type SectionCardProps = {
     title: string;
@@ -23,9 +17,9 @@ export default function SectionCard({ title, description, image }: SectionCardPr
                 className="rounded-2xl"
             />
         </div>
-        <div className={"col-span-1" + lato.className}>
+        <div className="col-span-1">
             <div className="text-3xl text-primary font-bold">{title}</div>
-            <div className="text-xl text-justify font-semibold">
+            <div className="text-xl text-justify">
                 {
                     description.split("\n").map((line, index) => (
                         <p key={index}>{line}</p>

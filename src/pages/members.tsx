@@ -20,7 +20,7 @@ export default function MembersPage({ ec, directorate }: InferGetStaticPropsType
             <Container size="lg" className='flex flex-col gap-12'>
                 <section className='py-8 flex flex-col gap-8 rounded-3xl'>
                     <header>
-                        <h1 className='text-emerald-700 flex justify-center'>
+                        <h1 className='text-primary flex justify-center'>
                             Meet Our Team
                         </h1>
                         <h2 className='flex justify-center'>

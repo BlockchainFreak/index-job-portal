@@ -17,7 +17,7 @@ export default function Header() {
             <div className="flex justify-end sm:justify-center flex-grow">
                 <Tabs links={[
                     { label: "Home", link: "/", Icon: IconHome },
-                    { label: "Jobs", link: "/jobs", Icon: IconBriefcase },
+                    // { label: "Jobs", link: "/jobs", Icon: IconBriefcase },
                     { label: "Events", link: "/events", Icon: IconCalendarEvent },
                     { label: "Our Partners", link: "/partners", Icon: IconFriends },
                     { label: "Our Team", link: "/members", Icon: IconUsersGroup },

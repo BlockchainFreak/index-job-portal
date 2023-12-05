@@ -2,7 +2,6 @@ import { useRouter, usePathname } from "next/navigation"
 import { useEffect, useRef, useState } from "react"
 import { useWindowSize } from "@/hooks/useWindowSize"
 import { MantineTheme, Burger, Menu } from "@mantine/core"
-import { useDisclosure } from '@mantine/hooks';
 
 interface Link {
     label: string
@@ -53,12 +52,12 @@ export default function Header({ links }: TabProps) {
         <>
             <nav className="gap-4 items-center relative hidden sm:flex" ref={ref}>
                 {links.map(({ label, link, Icon }) => (
-                    <div key={link} className="flex items-center text-white hover:bg-emerald-500 rounded-md px-2 py-1 cursor-pointer" onClick={() => push(link)}>
+                    <div key={link} className="flex items-center text-white hover:bg-primary rounded-md px-2 py-1 cursor-pointer" onClick={() => push(link)}>
                         <Icon size={20} />
-                        {!isMobile && <span className="ml-2 font-mono">{label}</span>}
+                        {!isMobile && <span className="ml-2">{label}</span>}
                     </div>
                 ))}
-                <span className="-z-10 h-full rounded-md bottom-0 absolute bg-emerald-600 transition-all duration-300 ease-in-out delay-0" style={{ left: activeNav.offsetLeft, minWidth: activeNav.width }} />
+                <span className="-z-10 h-full rounded-md bottom-0 absolute bg-secondary transition-all duration-300 ease-in-out delay-0" style={{ left: activeNav.offsetLeft, minWidth: activeNav.width }} />
             </nav>
             <nav className="sm:hidden flex justify-end border">
                 <Menu opened={isMenuOpen} onChange={setMenuOpen} width={width}>

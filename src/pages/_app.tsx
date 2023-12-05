@@ -16,7 +16,7 @@ const customTheme: MantineThemeOverride = {
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={lato.className}>
+    <div className="font-montserrat">
       <MantineProvider theme={customTheme} withGlobalStyles withNormalizeCSS>
         <Header />
         <div className="fixed w-screen h-screen inset-0 bg-black opacity-10 -z-50">

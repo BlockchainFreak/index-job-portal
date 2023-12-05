@@ -1,14 +1,7 @@
 import Image from "next/image"
 // import { SwatchCard } from "@/components"
 import Typewriter from 'typewriter-effect';
-import { Roboto } from "next/font/google"
 import SectionCard from "@/components/SectionCard";
-
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ['500', '700'],
-  variable: "--roboto"
-})
 
 const sections = [
   {
@@ -51,17 +44,19 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="flex gap-2 justify-center text-3xl font-impact">
-        INDEX is all about
-        <span className="text-teal-500">
-          <Typewriter
-            options={{
-              strings: ['Innovation', 'Technology', 'Design', 'Creativity'],
-              autoStart: true,
-              loop: true,
-            }}
-          />
-        </span>
+      <div className="flex gap-2 justify-center text-3xl">
+        <div>
+          <span>INDEX is all about</span>
+          <span className="text-primary">
+            <Typewriter
+              options={{
+                strings: ['Innovation', 'Technology', 'Design', 'Creativity'],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </span>
+        </div>
       </div>
       <div className="flex flex-col justify-center bg-black p-6 rounded-md bg-opacity-20">
         <h2 className="text-3xl text-primary text-center">Who We Are</h2>
@@ -101,8 +96,8 @@ export default function Home() {
         {
           sections.map((section, i) => (
             <SectionCard key={i} {...section} />
-            ))
-          }
+          ))
+        }
       </div>
     </div>
   )

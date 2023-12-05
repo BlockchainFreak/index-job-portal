@@ -1,8 +1,6 @@
 import { Document } from "@contentful/rich-text-types";
-import { Badge, Button, Card, Group, Spoiler, Text, Title } from "@mantine/core"
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { lato } from "@/utils/fonts";
 
 interface EventCardProps {
     title: string;
@@ -20,15 +18,15 @@ export default function EventCard({ title, time, description, coverURL, slug }: 
 
     return (
         <div
-            className="flex flex-col sm:flex-row gap-8 even:md:flex-row-reverse"
+            className="flex flex-col xl:flex-row gap-8 even:xl:flex-row-reverse"
             // onClick={() => router.push(`/events/${slug}`)}
         >
             <div>
                 <h2 className="text-4xl font-bold text-primary">{title}</h2>
-                <p className={lato.className + " text-xl text-justify"}>{para}</p>
+                <p className={"text-xl text-justify"}>{para}</p>
             </div>
             <div>
-                <div className="relative w-80 sm:w-96 aspect-square">
+                <div className="relative w-full sm:w-96 aspect-square">
                     <Image
                         alt=""
                         src={"https:" + coverURL}

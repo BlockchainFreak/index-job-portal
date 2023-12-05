@@ -32,9 +32,6 @@ dependencies:
   '@mantine/notifications':
     specifier: ^6.0.17
     version: 6.0.17(@mantine/core@6.0.17)(@mantine/hooks@6.0.17)(react-dom@18.2.0)(react@18.2.0)
-  '@next/font':
-    specifier: ^14.0.3
-    version: 14.0.3(next@13.4.13)
   '@tabler/icons-react':
     specifier: ^2.30.0
     version: 2.30.0(react@18.2.0)
@@ -519,14 +516,6 @@ packages:
     resolution: {integrity: sha512-RpZeXlPxQ9FLeYN84XHDqRN20XxmVNclYCraLYdifRsmibtcWUWdwE/ANp2C8kgesFRsvwfsw6eOkYNl9sLJ3A==}
     dependencies:
       glob: 7.1.7
-    dev: false
-
-  /@next/font@14.0.3(next@13.4.13):
-    resolution: {integrity: sha512-M96skA6j99ri/J9+BpoDOoO9ntadHUyX2CmwSzsLDm3fL3hgyPfskH6Kd92sz6H8cr7ZHV3xNkCTggFvnLdq2Q==}
-    peerDependencies:
-      next: '*'
-    dependencies:
-      next: 13.4.13(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
   /@next/swc-darwin-arm64@13.4.13:
